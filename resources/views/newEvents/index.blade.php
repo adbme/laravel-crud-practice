@@ -63,7 +63,7 @@
 <style>
 
     img{
-
+        margin-top: 70px;
         margin-bottom: 100px;
         width: 60%;
         transition: 0.3s;
@@ -93,23 +93,44 @@
     }
 
     .action {
-        margin-bottom: 100px;
+        margin-bottom: 340px;
         position: fixed;
         display: flex;
-        background-color: red;
+
         align-items: center;
+
     }
 
     .form-delete{
         margin-top: 16px;
     }
 
-    a {
+    .fa {
         text-decoration: none;
-        color: black;
+        color: white;
+        transition: 0.3s;
+        margin: -10px 10px -10px 10px ;
     }
 
+    .fa:hover {
+        transform: scale(1.6);
+        color: red;
+    }
 
+@media screen and (max-width: 1000px) {
+    .fa {
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+        margin: -10px 0 -10px 0 ;
+    }
+
+    img{
+        margin-top: 60px;
+        margin-bottom: 30px;
+    width: 120px;
+    }
+}
 
 </style>
 
