@@ -8,7 +8,7 @@
             <div class="card-body">
                 <h1>{{$newEvents-> name_surname_author_new_event}}</h1>
                 <h2 class="card-text">{{$newEvents-> title_new_event}}</h2>
-                <p class="card-text">Description : {{$newEvents-> description_new_event}}</p>
+                <p class="card-text">Description: {{$newEvents-> description_new_event}}</p>
                 <p class="card-text">File : {{$newEvents-> join_file_new_event}}</p>
                 <p class="card-text">Link : <a href="{{$newEvents-> join_link_new_event}}">{{$newEvents-> join_link_new_event}}</a></p>
                 <p class="card-text">Date event : {{$newEvents-> date_new_event}}</p>

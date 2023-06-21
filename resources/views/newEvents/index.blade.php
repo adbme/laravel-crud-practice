@@ -18,15 +18,15 @@
                             @foreach($newEvents as $item)
                                 <div class="col-md-4">
 
-                                        <div class=" event">
+                                        <div class="event">
 
                                             <div class="action">
-                                                <a href="{{ url('/newEvent/' . $item->id_new_event) }}" class="card-link" title="View newEvent">view</a>
-                                                <a href="{{ url('/newEvent/' . $item->id_new_event . '/edit') }}" class="card-link" title="Edit newEvent">Edit</a>
-                                                <form method="POST" action="{{ url('/newEvent/' . $item->id_new_event) }}" accept-charset="UTF-8" style="display: inline">
+                                                <a href="{{ url('/newEvent/' . $item->id_new_event) }}" class="card-link" title="View newEvent"><i class="fa fa-eye fa-2x"></i></a>
+                                                <a href="{{ url('/newEvent/' . $item->id_new_event . '/edit') }}" class="card-link" title="Edit newEvent"><i class="fa fa-pencil-square-o fa-2x"></i></a>
+                                                <form class="form-delete" method="POST" action="{{ url('/newEvent/' . $item->id_new_event) }}" accept-charset="UTF-8">
                                                     {{ method_field('DELETE') }}
                                                     {{ csrf_field() }}
-                                                    <button type="submit" class="btn btn-link card-link" title="Delete New Event">Delete</button>
+                                                    <button type="submit" class="btn btn-link card-link" title="Delete New Event"><i class="fa fa-trash fa-2x"></i></button>
                                                 </form>
                                             </div>
 
@@ -47,6 +47,7 @@
 
 
                                         </div>
+
                                     </div>
 
                             @endforeach
@@ -62,9 +63,15 @@
 <style>
 
     img{
+
         margin-bottom: 100px;
         width: 60%;
+        transition: 0.3s;
     }
+    img:hover{
+     transform: scale(1.2);
+    }
+
     .event{
         margin: 20px;
         max-width: 300px;
@@ -80,12 +87,21 @@
         height: 400px;
     }
 
-    .event:hover{
+    .event:hover {
         transform: scale(1.07);
+
     }
 
-    .action{
+    .action {
+        margin-bottom: 100px;
+        position: fixed;
         display: flex;
+        background-color: red;
+        align-items: center;
+    }
+
+    .form-delete{
+        margin-top: 16px;
     }
 
     a {
@@ -93,14 +109,7 @@
         color: black;
     }
 
-    .info{
 
-        justify-content: space-between;
-     background-color: red;
-    }
-
-    .info > * {
-        flex-basis: 50%;
-    }
 
 </style>
+
