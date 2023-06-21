@@ -19,3 +19,8 @@ Route::get('/', function () {
 });
 
 Route::resource("/newEvent", newEventController::class);
+
+
+Route::get('/react-example', function () {
+    return view('react');
+});
