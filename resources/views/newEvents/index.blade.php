@@ -113,7 +113,7 @@
     }
 
     .fa:hover {
-        transform: scale(1.6);
+        transform: scale(1.4);
         color: red;
     }
 
