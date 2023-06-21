@@ -92,8 +92,9 @@ class newEventController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        newEvent::destroy($id);
+        return redirect('newEvent')->with('flash_message', 'New Event updated !');
     }
 }
