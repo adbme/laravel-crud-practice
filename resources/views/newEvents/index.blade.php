@@ -84,7 +84,7 @@
         transition: 0.3s;
         cursor: pointer;
         padding: 20px;
-        height: 400px;
+        height: 450px;
     }
 
     .event:hover {
@@ -98,7 +98,6 @@
         display: flex;
 
         align-items: center;
-
     }
 
     .form-delete{
@@ -114,7 +113,7 @@
 
     .fa:hover {
         transform: scale(1.4);
-        color: red;
+        color: #d9ef68;
     }
 
 @media screen and (max-width: 1000px) {
