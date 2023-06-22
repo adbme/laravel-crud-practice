@@ -1,0 +1,8 @@
+<h1>upload test</h1>
+<form action="/upload" method="POST" enctype="multipart/form-data">
+    @csrf
+    <input type="file" name="file">
+
+    <input type="submit" value="submit">
+</form>
+

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\newEventController;
+use App\Http\Controllers\uploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,7 @@ Route::resource("/newEvent", newEventController::class);
 Route::get('/react-example', function () {
     return view('react');
 });
+
+
+Route::view('upload', 'upload');
+Route::post('upload', [uploadController::class, 'index']);
