@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Models\newEvent;
 
 class newEventController extends Controller
@@ -33,7 +34,6 @@ class newEventController extends Controller
             'name_surname_author_new_event',
             'title_new_event',
             'description_new_event',
-            'join_file_new_event',
             'join_link_new_event',
             'date_new_event',
             'hour_new_event',
@@ -42,9 +42,23 @@ class newEventController extends Controller
             'num_disposition_new_event'
         ]);
 
+        // Vérifier si un fichier a été téléchargé
+        if ($request->hasFile('join_file_new_event')) {
+            $file = $request->file('join_file_new_event');
+
+            // Générer un nom unique pour le fichier
+            $filename = time() . '_' . $file->getClientOriginalName();
+
+            // Stocker le fichier dans le répertoire de stockage (storage/app/public)
+            $path = $file->storeAs('public', $filename);
+
+            // Mettre à jour le champ 'join_file_new_event' avec le nom du fichier
+            $input['join_file_new_event'] = $filename;
+        }
+
         newEvent::create($input);
 
-        return redirect('newEvent')->with('flash_message', 'New Event added !');
+        return redirect('newEvent')->with('flash_message', 'Nouvel événement ajouté !');
     }
 
 

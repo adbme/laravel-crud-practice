@@ -5,12 +5,12 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h2>New events</h2>
+                        <h2>Events</h2>
                     </div>
 
                     <div class="card-body">
                         <a href="{{ url('/newEvent/create') }}" class="btn btn-success btn-sm" title="Add new event">
-                            Add New
+                            <i class="fa fa-regular fa-plus"></i>Add New event
                         </a>
                         <br><br>
 
@@ -30,7 +30,8 @@
                                                 </form>
                                             </div>
 
-                                            <img src="{{ asset('images/logo.svg') }}" alt="">
+
+                                            <img onclick="jobtrek()" src="{{ asset('images/logo.svg') }}" alt="">
 
                                             <div class="info">
                                                 {{--titre--}}
@@ -94,7 +95,7 @@
 
     .action {
         margin-bottom: 340px;
-        position: fixed;
+        position: absolute;
         display: flex;
 
         align-items: center;
@@ -132,4 +133,11 @@
 }
 
 </style>
+
+<script>
+    function jobtrek(){
+        window.location.assign("https://jobtrek.ch/")
+
+    }
+</script>
 
