@@ -19,12 +19,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource("/newEvent", newEventController::class);
+Route::resource("/newEvent", newEventController::class, [uploadController::class, 'index']);
 
 
-Route::get('/react-example', function () {
-    return view('react');
-});
 
 
 Route::view('upload', 'upload');

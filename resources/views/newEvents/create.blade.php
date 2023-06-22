@@ -6,7 +6,7 @@
 
         <div class="card-body">
 
-            <form action="{{url('newEvent')}}" method="post" >
+            <form action="{{url('newEvent')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <label>name_surname_author_new_event</label><br>
                 <input type="text" name="name_surname_author_new_event" class="form-control"><br>

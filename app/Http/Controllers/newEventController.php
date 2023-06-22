@@ -15,6 +15,7 @@ class newEventController extends Controller
     {
         $newEvent = newEvent::all();
         return view('newEvents.index')->with('newEvents', $newEvent);
+
     }
 
     /**
@@ -47,7 +48,8 @@ class newEventController extends Controller
         // Enregistrer le fichier téléchargé
         if ($request->hasFile('join_file_new_event')) {
             $file = $request->file('join_file_new_event');
-            $path = $file->store('app');
+            $fileName = $file->getClientOriginalName(); // Obtenir le vrai nom du fichier
+            $path = $file->storeAs('app', $fileName);
             $input['join_file_new_event'] = $path;
         }
 
@@ -56,6 +58,7 @@ class newEventController extends Controller
 
         return redirect('newEvent')->with('flash_message', 'New Event added!');
     }
+
 
 
 
