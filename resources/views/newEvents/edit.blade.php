@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="card" style="margin-top: 20px">
-        <div class="card-header">Edit Events</div>
+        <div class="card-header">Edit Event number {{$newEvents->id_new_event}}</div>
 
         <div class="card-body">
 
