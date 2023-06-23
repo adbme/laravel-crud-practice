@@ -99,9 +99,19 @@ class newEventController extends Controller
             'plan_room_new_event',
             'num_disposition_new_event'
         ]);
+
+        // Vérifier si un nouveau fichier a été téléchargé
+        if ($request->hasFile('join_file_new_event')) {
+            $file = $request->file('join_file_new_event');
+            $fileName = $file->getClientOriginalName(); // Obtenir le vrai nom du fichier
+            $file->storeAs('app', $fileName); // Enregistrer le fichier dans le répertoire "app"
+            $input['join_file_new_event'] = $fileName;
+        }
+
         $newEvent->update($input);
-        return redirect('newEvent')->with('flash_message', 'New Event updated !');
+        return redirect('newEvent')->with('flash_message', 'New Event updated!');
     }
+
 
     /**
      * Remove the specified resource from storage.
