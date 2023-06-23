@@ -5,7 +5,9 @@
         <div class="card-header">Edit Event number {{$newEvents->id_new_event}}</div>
 
         <div class="card-body">
-
+            <a href="/newEvent">
+                <h5><i class="fa fa-solid fa-arrow-left"></i>return home</h5>
+            </a>
                 <form action="{{url('newEvent/' .$newEvents->id_new_event)}}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method("PATCH")

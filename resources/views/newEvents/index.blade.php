@@ -30,6 +30,9 @@
                                                 </form>
                                             </div>
 
+                                            <div class="num_event">
+                                                <p class="number">{{ $item->id_new_event }}</p>
+                                            </div>
 
                                             <img onclick="jobtrek()" src="{{ asset('images/logo.svg') }}" alt="">
 
@@ -65,6 +68,7 @@
 <style>
 
     img{
+        margin-left: 70px;
         margin-top: 70px;
         margin-bottom: 100px;
         width: 60%;
@@ -76,17 +80,14 @@
 
     .event{
         margin: 20px;
-        max-width: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+        max-width: 400px;
+
         background: linear-gradient(180deg, #2F4472 0%, #7EAF39 100%);
         border-radius: 23px 23px 0px 0px;
         transition: 0.3s;
         cursor: pointer;
         padding: 20px;
-        height: 450px;
+        height: 500px;
     }
 
     .event:hover {
@@ -95,6 +96,7 @@
     }
 
     .action {
+        margin-left: 50px;
         margin-bottom: 340px;
         position: absolute;
         display: flex;
@@ -111,6 +113,18 @@
         color: white;
         transition: 0.3s;
         margin: -10px 10px -10px 10px ;
+    }
+
+    .number{
+        color: white;
+        font-size: 30px;
+        cursor: text;
+    }
+
+    .num_event{
+        position: absolute;
+        margin-bottom: 380px;
+        margin-left: 290px;
     }
 
     .fa:hover {
@@ -134,6 +148,43 @@
 
 
 }
+@media screen and (max-width: 1000px) {
+    .fa {
+        text-decoration: none;
+        color: white;
+        transition: 0.3s;
+        margin: -10px 0 -10px 0 ;
+    }
+
+    img{
+        margin-top: 60px;
+        margin-bottom: 30px;
+    width: 120px;
+    }
+
+
+}
+
+    @media screen and (max-width: 1300px) {
+        .num_event{
+
+        }
+        .action {
+            margin-left: 0;
+        }
+
+        img{
+            margin-left: 0;
+        }
+
+        .event{
+            height: 600px;
+        }
+
+
+    }
+
+
 
 </style>
 

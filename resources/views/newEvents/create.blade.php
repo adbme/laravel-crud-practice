@@ -5,7 +5,9 @@
         <div class="card-header">Create newEvent</div>
 
         <div class="card-body">
-
+            <a href="/newEvent">
+                <h5><i class="fa fa-solid fa-arrow-left"></i>return home</h5>
+            </a>
             <form action="{{url('newEvent')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <label>name_surname_author_new_event</label><br>
