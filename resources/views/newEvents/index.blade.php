@@ -37,12 +37,13 @@
                                                 {{--titre--}}
                                             <h2 class="card-title">{{ $item->title_new_event }}</h2>
                                                 {{--nom prenom--}}
-                                            <h6 class="card-subtitle mb-2 ">{{ $item->name_surname_author_new_event }}</h6>
+                                            <h5 class="card-subtitle mb-2 ">{{ $item->name_surname_author_new_event }}</h5>
                                                 {{--salle--}}
                                             <h6 class="card-subtitle mb-2 ">{{ $item->room_new_event }}</h6>
                                                 {{--date / heure--}}
                                             <p class="card-subtitle mb-2 t">{{ $item->date_new_event }} / {{ $item->hour_new_event }}</p>
                                                 <p class="card-subtitle mb-2 ">{{ $item->description_new_event }}</p>
+                                                <p class="card-subtitle"><a href="{{ asset('/images/' . $item->join_file_new_event) }}" download>{{$item->join_file_new_event}}</a></p>
 
                                             </div>
 
@@ -130,6 +131,8 @@
         margin-bottom: 30px;
     width: 120px;
     }
+
+
 }
 
 </style>
