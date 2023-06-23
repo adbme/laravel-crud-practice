@@ -13,7 +13,7 @@
                 <h1><i class="fa fa-user"></i>{{$newEvents->name_surname_author_new_event}}</h1>
                 <h2 class="card-text"><i class="fa fa-regular fa-leaf"></i>{{$newEvents->title_new_event}}</h2>
                 <p class="card-text"><i class="fa fa-pencil"></i>Description: {{$newEvents->description_new_event}}</p>
-                <p class="card-text"><i class="fa fa-download"></i>File: <a href="{{ asset($newEvents->join_file_new_event) }}" download>{{$newEvents->join_file_new_event}}</a></p>
+                <p class="card-text"><i class="fa fa-download"></i>File: <a href="{{ asset('/images/' . $newEvents->join_file_new_event) }}" download>{{$newEvents->join_file_new_event}}</
                 <p class="card-text"><i class="fa fa-link"></i>Link: <a href="{{$newEvents->join_link_new_event}}">{{$newEvents->join_link_new_event}}</a></p>
                 <p class="card-text"><i class="fa fa-calendar"></i>Date event: {{$newEvents->date_new_event}}</p>
                 <p class="card-text"><i class="fa fa-calendar"></i>Hour event: {{$newEvents->hour_new_event}}</p>

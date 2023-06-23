@@ -50,7 +50,7 @@ class newEventController extends Controller
             $file = $request->file('join_file_new_event');
             $fileName = $file->getClientOriginalName(); // Obtenir le vrai nom du fichier
             $file->move('images', $fileName); // Déplacer le fichier vers le répertoire "public/images"
-            $input['join_file_new_event'] = 'images/' . $fileName;
+            $input['join_file_new_event'] = $fileName;
         }
 
         // Enregistrer le modèle dans la base de données
