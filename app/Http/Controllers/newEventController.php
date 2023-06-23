@@ -49,8 +49,8 @@ class newEventController extends Controller
         if ($request->hasFile('join_file_new_event')) {
             $file = $request->file('join_file_new_event');
             $fileName = $file->getClientOriginalName(); // Obtenir le vrai nom du fichier
-            $path = $file->storeAs('app', $fileName);
-            $input['join_file_new_event'] = $path;
+            $file->move('images', $fileName); // Déplacer le fichier vers le répertoire "public/images"
+            $input['join_file_new_event'] = 'images/' . $fileName;
         }
 
         // Enregistrer le modèle dans la base de données
@@ -111,4 +111,7 @@ class newEventController extends Controller
         newEvent::destroy($id);
         return redirect('newEvent')->with('flash_message', 'New Event updated !');
     }
+
+
+
 }

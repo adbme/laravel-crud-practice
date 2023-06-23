@@ -14,6 +14,7 @@
                 <h2 class="card-text"><i class="fa fa-regular fa-leaf"></i>{{$newEvents->title_new_event}}</h2>
                 <p class="card-text"><i class="fa fa-pencil"></i>Description: {{$newEvents->description_new_event}}</p>
                 <p class="card-text"><i class="fa fa-download"></i>File: {{$newEvents->join_file_new_event}}</p>
+                <a href="{{ asset('app/app/Screenshot from 2023-06-21 16-32-23.png') }}" download>Télécharger le fichier</a>
                 <p class="card-text"><i class="fa fa-link"></i>Link: <a href="{{$newEvents->join_link_new_event}}">{{$newEvents->join_link_new_event}}</a></p>
                 <p class="card-text"><i class="fa fa-calendar"></i>Date event: {{$newEvents->date_new_event}}</p>
                 <p class="card-text"><i class="fa fa-calendar"></i>Hour event: {{$newEvents->hour_new_event}}</p>

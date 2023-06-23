@@ -26,3 +26,4 @@ Route::resource("/newEvent", newEventController::class, [uploadController::class
 
 Route::view('upload', 'upload');
 Route::post('upload', [uploadController::class, 'index']);
+
