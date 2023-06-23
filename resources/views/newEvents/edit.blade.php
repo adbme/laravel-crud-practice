@@ -6,7 +6,7 @@
 
         <div class="card-body">
 
-                <form action="{{url('newEvent/' .$newEvents->id_new_event)}}" method="post">
+                <form action="{{url('newEvent/' .$newEvents->id_new_event)}}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method("PATCH")
                     <input type="hidden" name="id" id="id" value="{{$newEvents->id_new_event}}"><br>
