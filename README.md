@@ -42,9 +42,8 @@ cd laravel-crud-practice/front-end
 npm install
 ```
 
-3. Install the back-end project dependencies:
+3. Install the dependencies using Composer:
 ```bash
-cd breeze-react_practice/back-end
 composer install
 ```
 
@@ -69,14 +68,8 @@ php artisan key:generate
 php artisan migrate
 ```
 
-7. Start the front-end development server:
-```bash
-cd breeze-react_practice/front-end
-npm start
-```
-8. Start the back-end development server:
+7. Start the back-end development server:
 
 ```bash
-cd breeze-react_practice/back-end
 php artisan serve
 ```
