@@ -1,12 +1,12 @@
 @extends('newEvents.layout')
 @section('content')
 
-    <div class="card" style="margin-top: 20px">
+    <div class="card formCard" style="margin-top: 20px">
         <div class="card-header">Create newEvent</div>
 
         <div class="card-body">
-            <a href="/newEvent">
-                <h5><i class="fa fa-solid fa-arrow-left"></i>return home</h5>
+            <a href="http://127.0.0.1:8001/dashboard">
+                <h5><i class="fa fa-solid fa-arrow-left" style="margin-right: 20px"></i>return home</h5>
             </a>
             <form action="{{url('newEvent')}}" method="post" enctype="multipart/form-data">
                 @csrf
@@ -47,3 +47,20 @@
         </div>
     </div>
 @stop
+
+
+<style>
+    body{
+
+
+        background: linear-gradient(#314770, #76A43F);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .formCard {
+        margin-bottom: 20px;
+    }
+</style>
