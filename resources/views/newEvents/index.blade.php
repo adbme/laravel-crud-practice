@@ -81,7 +81,7 @@
     .event{
         margin: 20px;
         max-width: 400px;
-
+        box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.25);
         background: linear-gradient(180deg, #2F4472 0%, #7EAF39 100%);
         border-radius: 23px 23px 0px 0px;
         transition: 0.3s;
